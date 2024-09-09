@@ -1,0 +1,63 @@
+name: electric_tile_demo
+description: "A new Flutter project."
+publish_to: "none"
+version: 0.1.0
+
+environment:
+  sdk: ">=3.4.1 <4.0.0"
+
+dependencies:
+  auto_size_text: ^3.0.0
+  carousel_slider: ^5.0.0
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.10+1
+  gap: ^3.0.1
+  get: ^4.6.6
+  google_fonts: ^6.2.1
+  google_nav_bar: ^5.0.6
+  lorem_ipsum: ^0.0.3
+  riverpod: ^2.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/svg/CircleAvatar.svg
+    - assets/DogAvatar.png
+    - assets/svg/ETMainLogo.svg
+    - assets/svg/google_logo.svg
+    - assets/svg/apple_logo.svg
+    - assets/svg/facebook_logo.svg
+    - assets/svg/tiempoReal/energiaGenerada.svg
+    - assets/icons/pdfIcon.svg
+    - assets/svg/tiempoReal/voltaje.svg
+    - assets/svg/tiempoReal/amperaje.svg
+
+    - assets/svg/dispositivos/calle.png
+    - assets/svg/dispositivos/pasillo.png
+    - assets/svg/dispositivos/jardin.png
+    - assets/svg/dispositivos/calle.svg
+    - assets/svg/dispositivos/pasillo.svg
+    - assets/svg/dispositivos/jardin.svg
+    - assets/test.svg
+    - assets/Devices.svg
+    - assets/Logos.svg
+    - assets/status/Cargando.svg
+    - assets/status/CiclosCargaGraph.svg
+    - assets/status/Internet.svg
+    - assets/disp/NewPasillo.svg
+    - assets/disp/chingatumadre.svg
+    - assets/disp/vetealv.svg
+    - assets/disp/funciona.svg
+    - assets/svg/historial/voltajeHistorial.svg
+    - assets/svg/historial/energiaHistorial.svg
+    - assets/svg/historial/amperajeHistorial.svg
+    - assets/navBarIcons/dIcon.svg
+    - assets/navBarIcons/trIcon.svg
+    - assets/navBarIcons/sIcon.svg
+    - assets/navBarIcons/hIcon.svg
