@@ -2,6 +2,8 @@ import 'package:electric_tile_demo/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatefulWidget {
+  const MyDrawer({super.key});
+
   @override
   _MyDrawerState createState() => _MyDrawerState();
 }
@@ -32,28 +34,28 @@ class _MyDrawerState extends State<MyDrawer> {
               padding: EdgeInsets.zero,
               children: [
                 ListTile(
-                  leading: Icon(Icons.home),
-                  title: Text('Inicio'),
+                  leading: const Icon(Icons.home),
+                  title: const Text('Inicio'),
                   onTap: () {},
                 ),
                 ListTile(
-                  leading: Icon(Icons.person),
-                  title: Text('Perfil'),
+                  leading: const Icon(Icons.person),
+                  title: const Text('Perfil'),
                   onTap: () {},
                 ),
                 ListTile(
-                  leading: Icon(Icons.notifications),
-                  title: Text('Notificaciones'),
+                  leading: const Icon(Icons.notifications),
+                  title: const Text('Notificaciones'),
                   onTap: () {},
                 ),
                 ListTile(
-                  leading: Icon(Icons.settings),
-                  title: Text('Ajustes'),
+                  leading: const Icon(Icons.settings),
+                  title: const Text('Ajustes'),
                   onTap: () {},
                 ),
                 ListTile(
-                  leading: Icon(Icons.info),
-                  title: Text('Acerca de'),
+                  leading: const Icon(Icons.info),
+                  title: const Text('Acerca de'),
                   onTap: () {},
                 ),
               ],

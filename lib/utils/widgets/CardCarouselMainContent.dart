@@ -3,10 +3,11 @@ import 'package:flutter_svg/svg.dart';
 
 class CardCarouselMainContent extends StatelessWidget {
   const CardCarouselMainContent(
-      {super.key, required this.asset, this.myWidget});
+      {super.key, required this.asset, this.myWidget, this.function});
 
   final String asset;
   final Widget? myWidget;
+  final VoidCallbackAction? function;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,8 +18,12 @@ class CardCarouselMainContent extends StatelessWidget {
         children: [
           Card(
             color: Colors.white,
-            child: SvgPicture.asset(
-              asset,
+            child: GestureDetector(
+              onTap: () => function,
+              child: SvgPicture.asset(
+                height: MediaQuery.sizeOf(context).height * 0.5,
+                asset,
+              ),
             ),
           ),
           Container(

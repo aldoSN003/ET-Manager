@@ -30,14 +30,13 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     iColors().secondary; // Use default color if foregroundColor is null
-    return Container(
-      width: width != null ? width : double.infinity,
-      height: 50,
+    return SizedBox(
+      width: width ?? double.infinity,
+      height: MediaQuery.sizeOf(context).height * 0.05,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor:
-              backgroundColor != null ? backgroundColor : Colors.white,
+          backgroundColor: backgroundColor ?? Colors.white,
         ),
         child: Row(
           mainAxisAlignment:
@@ -45,7 +44,7 @@ class MyButton extends StatelessWidget {
           children: [
             if (icon != null) ...[
               icon!, // Muestra el ícono solo si no es null
-              Gap(25), // Espacio entre ícono y texto
+              const Gap(25), // Espacio entre ícono y texto
             ], // El ícono
             // Espacio entre ícono y texto
 
@@ -53,9 +52,7 @@ class MyButton extends StatelessWidget {
                 style: GoogleFonts.poppins(
                   fontSize: fontSize ?? 19,
                   fontWeight: fontWeight ?? FontWeight.w400,
-                  color: foregroundcolor != null
-                      ? foregroundcolor
-                      : Color.fromARGB(255, 20, 33, 61),
+                  color: foregroundcolor ?? Color.fromARGB(255, 20, 33, 61),
                 ))
           ],
         ),

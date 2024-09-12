@@ -52,11 +52,11 @@ class NavBar extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 20, 33, 61),
           shadowColor: Colors.grey,
           elevation: 5,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(16),
                   bottomRight: Radius.circular(16))),
-          bottom: PreferredSize(
+          bottom: const PreferredSize(
               preferredSize: Size.fromHeight(0),
               child: Padding(
                 padding: EdgeInsets.only(left: 10, bottom: 10),
@@ -74,7 +74,7 @@ class NavBar extends StatelessWidget {
                 ),
               )),
         ),
-        drawer: SafeArea(child: const Drawer()),
+        drawer: const SafeArea(child: Drawer()),
         bottomNavigationBar: Obx(
           () => NavigationBar(
             backgroundColor: Colors.white,

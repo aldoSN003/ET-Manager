@@ -12,10 +12,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return const GetMaterialApp(
       themeMode: ThemeMode
           .system, //This allows the app theme to switch between dark and light mode depending on the current device's mode
-      home: const WelcomePageCopy(),
+      home: WelcomePageCopy(),
     );
   }
 }

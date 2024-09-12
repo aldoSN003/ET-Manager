@@ -11,12 +11,16 @@ dependencies:
   carousel_slider: ^5.0.0
   flutter:
     sdk: flutter
+  flutter_animate: ^4.5.0
+  flutter_launcher_icons: ^0.13.1
   flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   get: ^4.6.6
   google_fonts: ^6.2.1
   google_nav_bar: ^5.0.6
   lorem_ipsum: ^0.0.3
+  mqtt_client: ^10.3.0
+  qr_code_scanner: ^1.0.1
   riverpod: ^2.5.1
 
 dev_dependencies:
@@ -37,13 +41,6 @@ flutter:
     - assets/icons/pdfIcon.svg
     - assets/svg/tiempoReal/voltaje.svg
     - assets/svg/tiempoReal/amperaje.svg
-
-    - assets/svg/dispositivos/calle.png
-    - assets/svg/dispositivos/pasillo.png
-    - assets/svg/dispositivos/jardin.png
-    - assets/svg/dispositivos/calle.svg
-    - assets/svg/dispositivos/pasillo.svg
-    - assets/svg/dispositivos/jardin.svg
     - assets/test.svg
     - assets/Devices.svg
     - assets/Logos.svg
@@ -61,3 +58,16 @@ flutter:
     - assets/navBarIcons/trIcon.svg
     - assets/navBarIcons/sIcon.svg
     - assets/navBarIcons/hIcon.svg
+    - assets/svg/dispositivos/PasilloContent.svg
+    - assets/Mall.svg
+    - assets/Hall.svg
+    - assets/THIS.jpg
+    - assets/Hallway.jpg
+    - assets/Street.jpg
+    - assets/IconLaunch.png
+    - assets/LauncherIcon.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/LauncherIcon.png"

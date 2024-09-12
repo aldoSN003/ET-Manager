@@ -15,17 +15,17 @@ class HistorialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> content = [
-      CardPdfContent(
+      const CardPdfContent(
         asset: "assets/svg/tiempoReal/energiaGenerada.svg",
       ),
-      CardPdfContent(asset: "assets/svg/tiempoReal/voltaje.svg"),
-      CardPdfContent(asset: "assets/svg/tiempoReal/amperaje.svg")
+      const CardPdfContent(asset: "assets/svg/tiempoReal/voltaje.svg"),
+      const CardPdfContent(asset: "assets/svg/tiempoReal/amperaje.svg")
     ];
     var screenHeigt = MediaQuery.sizeOf(context).height;
     var screenWidth = MediaQuery.sizeOf(context).width;
     return CarouselSlider(
       options: CarouselOptions(
-        autoPlayInterval: Duration(milliseconds: 1700),
+        autoPlayInterval: const Duration(milliseconds: 1700),
         height: MediaQuery.sizeOf(context).height,
         scrollDirection: Axis.vertical,
         enlargeCenterPage: true,
@@ -60,7 +60,7 @@ class CardPdfContent extends StatelessWidget {
                 asset,
               ),
             ),
-            PrintPdfButton()
+            const PrintPdfButton()
           ],
         ),
       ),

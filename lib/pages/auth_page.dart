@@ -26,14 +26,15 @@ class _AuthPageState extends State<AuthPage> {
                 const EdgeInsets.only(top: 20, bottom: 5, left: 15, right: 15),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                _header(),
-                SizedBox(
+                const _header(),
+                const SizedBox(
                   height: 25,
                 ),
-                Container(
+                SizedBox(
+                  height: MediaQuery.sizeOf(context).height * 0.3,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -69,19 +70,19 @@ class _AuthPageState extends State<AuthPage> {
                       ),
                     ],
                   ),
-                  height: MediaQuery.sizeOf(context).height * 0.3,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Container(
-                  child: Divider(),
-                  height: MediaQuery.sizeOf(context).height * 0.02,
-                ),
                 SizedBox(
+                  height: MediaQuery.sizeOf(context).height * 0.02,
+                  child: Divider(),
+                ),
+                const SizedBox(
                   height: 20,
                 ),
-                Container(
+                SizedBox(
+                  height: MediaQuery.sizeOf(context).height * 0.25,
                   child: Column(
                     children: [
                       ElevatedButton(
@@ -120,15 +121,14 @@ class _AuthPageState extends State<AuthPage> {
                       ),
                     ],
                   ),
-                  height: MediaQuery.sizeOf(context).height * 0.25,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Container(
+                SizedBox(
+                  height: MediaQuery.sizeOf(context).height * 0.06,
                   child: Text(
                       "Al registrarte, aceptas los Términos de Servicio y la Política de Privacidad, incluido el Uso de Cookies."),
-                  height: MediaQuery.sizeOf(context).height * 0.06,
                 ),
               ],
             ),
@@ -138,13 +138,12 @@ class _AuthPageState extends State<AuthPage> {
 }
 
 class _header extends StatelessWidget {
-  const _header({
-    super.key,
-  });
+  const _header();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
+      height: MediaQuery.sizeOf(context).height * 0.12,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -162,7 +161,6 @@ class _header extends StatelessWidget {
           ),
         ],
       ),
-      height: MediaQuery.sizeOf(context).height * 0.12,
     );
   }
 }

@@ -13,7 +13,7 @@ class CarouselMainContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        autoPlayInterval: Duration(milliseconds: 1700),
+        autoPlayInterval: const Duration(milliseconds: 1700),
         height: MediaQuery.sizeOf(context).height,
         scrollDirection: Axis.vertical,
         enlargeCenterPage: true,

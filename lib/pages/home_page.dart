@@ -1,3 +1,4 @@
+import 'package:electric_tile_demo/pages/QRScan/QRPage.dart';
 import 'package:electric_tile_demo/utils/constants/colors.dart';
 import 'package:electric_tile_demo/utils/constants/svg_icons.dart';
 import 'package:electric_tile_demo/utils/constants/text_styles.dart';
@@ -16,6 +17,37 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) =>
+                    QRScannerPage(),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                  var begin = Offset(0.0, 1.0);
+                  var end = Offset.zero;
+                  var curve = Curves.easeInOut;
+
+                  var tween = Tween(begin: begin, end: end)
+                      .chain(CurveTween(curve: curve));
+                  var offsetAnimation = animation.drive(tween);
+
+                  return SlideTransition(
+                    position: offsetAnimation,
+                    child: child,
+                  );
+                },
+              ),
+            );
+          },
+          backgroundColor: iColors.myblue,
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+        ),
         backgroundColor: Colors.white,
         appBar: AppBar(
           leading: Builder(builder: (context) {
@@ -23,7 +55,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
                 },
-                icon: Icon(Icons.menu));
+                icon: const Icon(Icons.menu));
           }),
           actions: const [
             Padding(
@@ -63,7 +95,7 @@ class HomePage extends StatelessWidget {
               ),
               Expanded(
                 flex: 6,
-                child: Container(
+                child: SizedBox(
                   height: double.infinity,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -72,7 +104,7 @@ class HomePage extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: RichText(
-                            text: TextSpan(children: [
+                            text: const TextSpan(children: [
                           TextSpan(
                               text: "Dispositivo actual: ",
                               style: TextStyle(color: Colors.grey)),
@@ -88,7 +120,7 @@ class HomePage extends StatelessWidget {
           foregroundColor: iColors.primary,
           backgroundColor: iColors.myblue,
           toolbarHeight: MediaQuery.sizeOf(context).height * 0.20,
-          shape: RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(16),
                 bottomRight: Radius.circular(16)),

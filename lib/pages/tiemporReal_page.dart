@@ -10,12 +10,12 @@ class TiemporealPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> items = [
-      CardCarouselMainContent(
+      const CardCarouselMainContent(
           asset: "assets/svg/historial/energiaHistorial.svg"),
-      CardCarouselMainContent(
+      const CardCarouselMainContent(
         asset: "assets/svg/historial/voltajeHistorial.svg",
       ),
-      CardCarouselMainContent(
+      const CardCarouselMainContent(
         asset: "assets/svg/historial/amperajeHistorial.svg",
       ),
     ];

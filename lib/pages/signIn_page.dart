@@ -21,8 +21,8 @@ class _SigninPageState extends State<SigninPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(),
-        body: Padding(
-          padding: const EdgeInsets.all(15.0),
+        body: const Padding(
+          padding: EdgeInsets.all(15.0),
           child: Column(
             children: [
               Expanded(
@@ -50,9 +50,7 @@ class _SigninPageState extends State<SigninPage> {
 }
 
 class _bodySignIn1 extends StatelessWidget {
-  const _bodySignIn1({
-    super.key,
-  });
+  const _bodySignIn1();
 
   @override
   Widget build(BuildContext context) {
@@ -68,6 +66,7 @@ class _bodySignIn1 extends StatelessWidget {
         MyButton(
           onPressed: () {},
           label: "Registro con Facebook",
+          fontSize: 17,
           icon: SvgIcons.facebookLogo,
         ),
         Gap(gapBetweenColumnElements),
@@ -80,7 +79,7 @@ class _bodySignIn1 extends StatelessWidget {
         Row(
           children: [
             // Divider antes del texto, ocupa la mitad del espacio
-            Expanded(
+            const Expanded(
               child: Divider(
                 color: Colors.grey, // Puedes cambiar el color del divider
                 thickness: 1, // Puedes cambiar el grosor
@@ -95,7 +94,7 @@ class _bodySignIn1 extends StatelessWidget {
               ),
             ),
             // Divider después del texto, ocupa la otra mitad del espacio
-            Expanded(
+            const Expanded(
               child: Divider(
                 color: Colors.grey,
                 thickness: 1,
@@ -109,9 +108,7 @@ class _bodySignIn1 extends StatelessWidget {
 }
 
 class _bodySignIn2 extends StatelessWidget {
-  const _bodySignIn2({
-    super.key,
-  });
+  const _bodySignIn2();
 
   @override
   Widget build(BuildContext context) {
@@ -119,7 +116,7 @@ class _bodySignIn2 extends StatelessWidget {
     return Column(
       children: [
         MyButton(
-          onPressed: () => Get.to(() => HomePage()),
+          onPressed: () => Get.to(() => const HomePage()),
           label: "Crea una cuenta",
           backgroundColor: iColors.primary,
           foregroundcolor: Colors.white,
@@ -142,13 +139,11 @@ class _bodySignIn2 extends StatelessWidget {
 }
 
 class _footerSignIn extends StatelessWidget {
-  const _footerSignIn({
-    super.key,
-  });
+  const _footerSignIn();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: RichText(
           text: TextSpan(children: [
@@ -172,13 +167,11 @@ class _footerSignIn extends StatelessWidget {
 }
 
 class _headerSignIn extends StatelessWidget {
-  const _headerSignIn({
-    super.key,
-  });
+  const _headerSignIn();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

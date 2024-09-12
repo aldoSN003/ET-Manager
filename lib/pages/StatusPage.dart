@@ -8,13 +8,13 @@ class BateriaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> items = [
-      CardCarouselMainContent(
+      const CardCarouselMainContent(
         asset: "assets/status/CiclosCargaGraph.svg",
       ),
-      CardCarouselMainContent(
+      const CardCarouselMainContent(
         asset: "assets/status/Cargando.svg",
       ),
-      CardCarouselMainContent(
+      const CardCarouselMainContent(
         asset: "assets/status/Internet.svg",
       )
     ];

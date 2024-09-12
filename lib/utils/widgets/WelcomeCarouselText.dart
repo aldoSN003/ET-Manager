@@ -9,7 +9,7 @@ class Welcomecarouseltext extends StatelessWidget {
   final String content;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(5.0),

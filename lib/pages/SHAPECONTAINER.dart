@@ -15,7 +15,7 @@ class CustomShapeContainer extends StatelessWidget {
       body: Stack(
         children: [
           // Your main scaffold content
-          Center(child: Text('Main Scaffold Content')),
+          const Center(child: Text('Main Scaffold Content')),
 
           // Positioned container with custom shape
           Positioned(

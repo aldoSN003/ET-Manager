@@ -6,6 +6,7 @@ import 'package:electric_tile_demo/utils/constants/colors.dart';
 import 'package:electric_tile_demo/utils/constants/text_styles.dart';
 import 'package:electric_tile_demo/utils/widgets/WelcomeCarouselText.dart';
 import 'package:electric_tile_demo/utils/widgets/button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
@@ -38,8 +39,8 @@ class _WelcomePageState extends State<WelcomePageCopy> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 50, left: 25),
+            const Padding(
+              padding: EdgeInsets.only(top: 50, left: 25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -53,7 +54,7 @@ class _WelcomePageState extends State<WelcomePageCopy> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             TweenAnimationBuilder<double>(
@@ -79,26 +80,6 @@ class _WelcomePageState extends State<WelcomePageCopy> {
       ),
       WelcomeFooterContainer(context: context),
     ]);
-  }
-
-  Widget _button() {
-    return SizedBox(
-      height: 25,
-      child: ElevatedButton(
-        onPressed: () {},
-        child: Text("Comienza"),
-        style: ButtonStyle(),
-      ),
-    );
-  }
-
-  Widget _comienzaButton() {
-    return IconButton(
-      onPressed: () {
-        Get.to(() => const SigninPage());
-      },
-      icon: const Icon(Icons.login, color: Color.fromARGB(255, 54, 244, 130)),
-    );
   }
 }
 
@@ -126,17 +107,20 @@ class WelcomeFooterContainer extends StatelessWidget {
           color: Colors.white,
           child: Column(
             children: [
-              Container(
-                child: TextCarousel(),
+              SizedBox(
                 height: MediaQuery.sizeOf(thecontext).height * 0.22,
+                child: TextCarousel(),
               ),
-              MyButton(
-                  fontWeight: FontWeight.w400,
-                  foregroundcolor: Colors.white,
-                  fontSize: 20,
-                  label: "Comienza",
-                  backgroundColor: iColors.primary,
-                  onPressed: () => Get.to(() => SigninPage()))
+              Padding(
+                padding: EdgeInsets.symmetric(
+                        horizontal: MediaQuery.sizeOf(thecontext).width) *
+                    0.1,
+                child: MyButton(
+                    label: "Comienza",
+                    backgroundColor: iColors.primary,
+                    foregroundcolor: Colors.white,
+                    onPressed: () => Get.to(() => SigninPage())),
+              )
             ],
           ),
         ),
@@ -155,7 +139,7 @@ class TextCarousel extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10),
       child: CarouselSlider(
-        items: [
+        items: const [
           Welcomecarouseltext(
             content:
                 "Con ET Manager serás capaz de monitorear tus baldosas en tiempo real y verificar que todas funcionen correctamente.",
@@ -176,7 +160,7 @@ class TextCarousel extends StatelessWidget {
           enlargeCenterPage: true,
           enlargeStrategy: CenterPageEnlargeStrategy.scale,
           viewportFraction: 0.9,
-          autoPlayInterval: Duration(milliseconds: 2000),
+          autoPlayInterval: const Duration(milliseconds: 2000),
           autoPlay: true,
         ),
       ),
