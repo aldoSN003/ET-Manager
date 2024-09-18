@@ -1,5 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:electric_tile_demo/pages/DeviceOnTapPage.dart';
+
 import 'package:electric_tile_demo/utils/constants/text_styles.dart';
 import 'package:electric_tile_demo/utils/widgets/CarouselMainContent.dart';
 import 'package:flutter/material.dart';

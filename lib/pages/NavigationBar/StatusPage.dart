@@ -1,3 +1,5 @@
+import 'package:electric_tile_demo/pages/RealTimeData/RealTimeCard.dart';
+import 'package:electric_tile_demo/pages/RealTimeData/RealTimeChart.dart';
 import 'package:electric_tile_demo/utils/widgets/CardCarouselMainContent.dart';
 import 'package:electric_tile_demo/utils/widgets/CarouselMainContent.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,9 @@ class BateriaPage extends StatelessWidget {
       ),
       const CardCarouselMainContent(
         asset: "assets/status/Internet.svg",
-      )
+      ),
+      RealTimeCard(),
+      RealTimeChart()
     ];
     return CarouselMainContent(items: items);
   }

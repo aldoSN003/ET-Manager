@@ -17,7 +17,7 @@ class CarouselMainContent extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height,
         scrollDirection: Axis.vertical,
         enlargeCenterPage: true,
-        autoPlay: true,
+        //  autoPlay: true,
         enlargeStrategy: CenterPageEnlargeStrategy.scale,
         viewportFraction: 0.9,
       ),

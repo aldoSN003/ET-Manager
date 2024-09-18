@@ -1,8 +1,9 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:electric_tile_demo/pages/RealTimeData/Voltaje.dart';
 import 'package:electric_tile_demo/utils/constants/text_styles.dart';
 import 'package:electric_tile_demo/utils/widgets/button.dart';
-import 'package:electric_tile_demo/utils/widgets/shapes/bezier_clipper1.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -15,11 +16,7 @@ class HistorialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> content = [
-      const CardPdfContent(
-        asset: "assets/svg/tiempoReal/energiaGenerada.svg",
-      ),
-      const CardPdfContent(asset: "assets/svg/tiempoReal/voltaje.svg"),
-      const CardPdfContent(asset: "assets/svg/tiempoReal/amperaje.svg")
+      VoltageChart(),
     ];
     var screenHeigt = MediaQuery.sizeOf(context).height;
     var screenWidth = MediaQuery.sizeOf(context).width;
@@ -29,7 +26,7 @@ class HistorialPage extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height,
         scrollDirection: Axis.vertical,
         enlargeCenterPage: true,
-        autoPlay: true,
+        //  autoPlay: true,
         enlargeStrategy: CenterPageEnlargeStrategy.scale,
         viewportFraction: 0.9,
       ),

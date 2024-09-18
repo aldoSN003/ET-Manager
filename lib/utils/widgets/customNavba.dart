@@ -1,7 +1,7 @@
-import 'package:electric_tile_demo/pages/StatusPage.dart';
-import 'package:electric_tile_demo/pages/dispositivos_page.dart';
-import 'package:electric_tile_demo/pages/historial_page.dart';
-import 'package:electric_tile_demo/pages/tiemporReal_page.dart';
+import 'package:electric_tile_demo/pages/NavigationBar/StatusPage.dart';
+import 'package:electric_tile_demo/pages/NavigationBar/dispositivos_page.dart';
+import 'package:electric_tile_demo/pages/NavigationBar/historial_page.dart';
+import 'package:electric_tile_demo/pages/NavigationBar/tiemporReal_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
